@@ -33,7 +33,7 @@ const adminRoute: Routes = [
             [
                 {
                     path: '', component: AdminLayoutComponent, children: [
-                      {path: 'admin', redirectTo: '/admin/login', pathMatch: 'full'},
+                      {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
                       {path: 'login', component: LoginComponent},
                       {path: 'dashboard', component: DashboardComponent},
                       {path: 'create', component: CreateComponent},

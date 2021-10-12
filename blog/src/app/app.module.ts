@@ -1,4 +1,3 @@
-import { AdminModule } from './admin/admin.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -17,7 +16,6 @@ import { PostPageComponent } from './post-page/post-page.component';
   ],
   imports: [
     BrowserModule,
-    AdminModule,
     AppRoutingModule
   ],
   providers: [],
