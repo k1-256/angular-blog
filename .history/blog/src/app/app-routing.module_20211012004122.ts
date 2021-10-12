@@ -19,6 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
+    AdminModule,
     RouterModule.forRoot(routes, {
     preloadingStrategy: PreloadAllModules
   })],

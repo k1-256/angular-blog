@@ -7,19 +7,18 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {
     path: '', component: MainLayoutComponent, children: [
-      {path: '', redirectTo: '/', pathMatch: 'full'},
-      {path: '', component: HomePageComponent},
-      {path: 'post/:id', component: PostPageComponent}
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      { path: '', component: HomePageComponent },
+      { path: 'post/:id', component: PostPageComponent }
     ]
-  },
+  }, 
   {
     path: 'admin', loadChildren: './admin/admin.module#AdminModule'
   }
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, {
+  imports: [RouterModule.forRoot(routes, {
     preloadingStrategy: PreloadAllModules
   })],
   exports: [RouterModule]
