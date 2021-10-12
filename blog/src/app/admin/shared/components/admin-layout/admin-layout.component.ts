@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-layout',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: Router
+  ) { }
 
   ngOnInit() {
+  }
+
+  exit(event: PointerEvent) {
+    console.log(event);
+    event.preventDefault();
+    this.route.navigate(['admin', 'login']);
   }
 
 }
